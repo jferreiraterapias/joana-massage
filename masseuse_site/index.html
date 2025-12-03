@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joana Ferreira — Massagem terapêutica</title>
+  <meta name="description" content="Massagem profissional em Santarém — relaxamento, deep tissue, massagem desportiva e deslocações. Marque com Joana Ferreira." />
+  <meta name="keywords" content="massagem, massagista, massagem desportiva, massagem relaxamento, massagem deep tissue, Santarém" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .hero-bg{ background-image: linear-gradient(rgba(8,8,10,0.45), rgba(8,8,10,0.45)), url('assets/massage1.jpg'); background-size: cover; background-position: center; }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+  <header class="bg-white shadow-sm sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3">
+        <img src="assets/logo.avif" alt="logo" class="w-10 h-10 rounded-full object-cover">
+        <div>
+          <h1 class="text-lg font-semibold">Joana Ferreira</h1>
+          <p class="text-xs text-gray-500" data-lang="pt">Massagista • Santarém</p>
+          <p class="text-xs text-gray-500" data-lang="en">Massage Therapist • Santarém</p>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        <nav class="hidden md:flex items-center gap-4">
+          <a href="#services" class="text-sm hover:underline" data-lang="pt">Serviços</a>
+          <a href="#services" class="text-sm hover:underline" data-lang="en">Services</a>
+          <a href="#about" class="text-sm hover:underline" data-lang="pt">Sobre</a>
+          <a href="#about" class="text-sm hover:underline" data-lang="en">About</a>
+          <a href="#book" class="text-sm hover:underline" data-lang="pt">Marcar</a>
+          <a href="#book" class="text-sm hover:underline" data-lang="en">Book</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="langPt" class="px-2 py-1 border rounded text-sm">PT</button>
+          <button id="langEn" class="px-2 py-1 border rounded text-sm">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-bg h-screen flex items-center">
+      <div class="max-w-4xl mx-auto px-6 py-20 text-white">
+        <div class="bg-black bg-opacity-30 backdrop-blur-sm p-8 rounded-2xl shadow-xl inline-block">
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="pt">Relaxa. Recupera. Renova.</h2>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="en">Relax. Restore. Renew.</h2>
+          <p class="mt-4 text-lg max-w-2xl" data-lang="pt">Massagem profissional adaptada às suas necessidades — relaxamento, deep tissue, recuperação desportiva e deslocações ao domicílio em Santarém.</p>
+          <p class="mt-4 text-lg max-w-2xl" data-lang="en">Professional massage tailored to your needs — relaxation, deep tissue, sports recovery and mobile visits in Santarém.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#book" class="px-5 py-3 bg-emerald-500 text-white rounded-md shadow" data-lang="pt">Marcar Sessão</a>
+            <a href="#book" class="px-5 py-3 bg-emerald-500 text-white rounded-md shadow" data-lang="en">Book a Session</a>
+            <a href="#services" class="px-5 py-3 bg-white text-gray-900 rounded-md shadow" data-lang="pt">Ver Serviços</a>
+            <a href="#services" class="px-5 py-3 bg-white text-gray-900 rounded-md shadow" data-lang="en">See Services</a>
+          </div>
+          <p class="mt-4 text-sm text-gray-200" data-lang="pt">Vouchers disponíveis • Terapeuta certificada</p>
+          <p class="mt-4 text-sm text-gray-200" data-lang="en">Gift vouchers available • Certified therapist</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-2xl font-semibold" data-lang="pt">Serviços</h3>
+        <h3 class="text-2xl font-semibold" data-lang="en">Services</h3>
+        <p class="mt-2 text-gray-600 max-w-2xl" data-lang="pt">Escolha um tratamento que se adapte às suas necessidades.</p>
+        <p class="mt-2 text-gray-600 max-w-2xl" data-lang="en">Choose a treatment that fits your needs.</p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="p-6 border rounded-lg">
+            <h4 class="font-semibold text-lg" data-lang="pt">Massagem de Relaxamento — 60 / 90 min</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Relaxation Massage — 60 / 90 min</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Movimentos suaves para aliviar a tensão e promover relaxamento profundo.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">Gentle strokes to ease tension and promote deep relaxation.</p>
+            <ul class="mt-3 text-sm text-gray-700 space-y-1">
+              <li data-lang="pt">60 min — 50€</li>
+              <li data-lang="pt">90 min — 70€</li>
+              <li data-lang="en">60 min — 50€</li>
+              <li data-lang="en">90 min — 70€</li>
+            </ul>
+          </article>
+          <article class="p-6 border rounded-lg">
+            <h4 class="font-semibold text-lg" data-lang="pt">Deep Tissue — 60 / 90 min</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Deep Tissue — 60 / 90 min</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Pressão focada para libertar tensão muscular crónica.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">Focused pressure to release chronic muscle tension.</p>
+            <ul class="mt-3 text-sm text-gray-700 space-y-1">
+              <li data-lang="pt">60 min — 65€</li>
+              <li data-lang="pt">90 min — 90€</li>
+              <li data-lang="en">60 min — 65€</li>
+              <li data-lang="en">90 min — 90€</li>
+            </ul>
+          </article>
+          <article class="p-6 border rounded-lg">
+            <h4 class="font-semibold text-lg" data-lang="pt">Massagem Desportiva / Terapia</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Sports Massage / Therapy</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Trabalho direcionado para atletas — pré/pós competição e prevenção de lesões.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">Targeted work for athletes — pre/post event and injury prevention.</p>
+            <p class="mt-3 text-sm text-gray-700" data-lang="pt">A partir de 50€ (depende da duração)</p>
+            <p class="mt-3 text-sm text-gray-700" data-lang="en">From 50€ (depends on session length)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-12 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold" data-lang="pt">Sobre Joana</h3>
+          <h3 class="text-2xl font-semibold" data-lang="en">About Joana</h3>
+          <p class="mt-3 text-gray-700" data-lang="pt">Joana Ferreira é terapeuta certificada com vários anos de experiência. Combina conhecimento de anatomia com uma abordagem calma e centrada no cliente.</p>
+          <p class="mt-3 text-gray-700" data-lang="en">Joana Ferreira is a certified therapist with several years of experience. She combines knowledge of anatomy with a calm, client-centered approach.</p>
+          <ul class="mt-4 text-sm text-gray-700 space-y-2">
+            <li data-lang="pt">✅ Certificada em técnicas clássicas e deep tissue</li>
+            <li data-lang="pt">✅ Treino de primeiros socorros</li>
+            <li data-lang="pt">✅ Deslocações ao domicílio em Santarém</li>
+            <li data-lang="en">✅ Certified in classical & deep tissue techniques</li>
+            <li data-lang="en">✅ First aid and client safety trained</li>
+            <li data-lang="en">✅ Mobile sessions in Santarém</li>
+          </ul>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow">
+          <img alt="Therapist working" src="assets/massage2.jpg" class="w-full h-64 object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="py-16">
+      <div class="max-w-3xl mx-auto px-6">
+        <h3 class="text-2xl font-semibold" data-lang="pt">Marcar uma sessão</h3>
+        <h3 class="text-2xl font-semibold" data-lang="en">Book a session</h3>
+        <p class="mt-2 text-gray-600" data-lang="pt">Use o formulário abaixo ou contacte por email/telefone.</p>
+        <p class="mt-2 text-gray-600" data-lang="en">Use the form below or contact by email/phone.</p>
+        <form id="bookingForm" action="#" method="POST" class="mt-6 grid gap-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <input name="name" required placeholder="Nome completo / Full name" class="p-3 border rounded" />
+            <input name="phone" required placeholder="Telefone (ex: +351...)" class="p-3 border rounded" />
+          </div>
+          <input name="email" type="email" placeholder="Email (opcional)" class="p-3 border rounded" value="joana.ferreira.terapeuta@gmail.com" />
+          <select name="service" class="p-3 border rounded">
+            <option value="relaxation">Relaxation / Relaxamento — 60 min</option>
+            <option value="deep">Deep Tissue — 60 min</option>
+            <option value="sports">Sports / Desportiva</option>
+            <option value="mobile">Mobile Visit / Deslocação</option>
+          </select>
+          <input name="date" type="date" class="p-3 border rounded md:w-1/2" />
+          <textarea name="notes" placeholder="Notas de saúde ou pedidos / Health notes or requests" class="p-3 border rounded" rows="4"></textarea>
+          <div class="flex items-center gap-3">
+            <button type="submit" class="px-5 py-3 bg-emerald-500 text-white rounded-md">Enviar pedido / Send request</button>
+            <p class="text-sm text-gray-600">ou ligue / or call <strong>+351 913 230 273</strong></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="py-12 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-semibold" data-lang="pt">Contacto</h3>
+          <h3 class="text-2xl font-semibold" data-lang="en">Contact</h3>
+          <p class="mt-3 text-gray-700" data-lang="pt">Email: <a href="mailto:joana.ferreira.terapeuta@gmail.com" class="underline">joana.ferreira.terapeuta@gmail.com</a><br/>Telefone: <strong>+351 913 230 273</strong><br/>Local: Santarém</p>
+          <p class="mt-3 text-gray-700" data-lang="en">Email: <a href="mailto:joana.ferreira.terapeuta@gmail.com" class="underline">joana.ferreira.terapeuta@gmail.com</a><br/>Phone: <strong>+351 913 230 273</strong><br/>Location: Santarém</p>
+        </div>
+        <div>
+          <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-600">Map placeholder</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-8 bg-white border-t">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-600">© <span id="year"></span> Joana Ferreira. All rights reserved.</p>
+        <div class="flex items-center gap-3 text-sm text-gray-600">
+          <a href="#" class="hover:underline">Privacy</a>
+          <a href="#" class="hover:underline">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function showLang(lang){
+      document.documentElement.lang = (lang === 'en') ? 'en' : 'pt';
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+      });
+    }
+    document.getElementById('langPt').addEventListener('click', ()=> showLang('pt'));
+    document.getElementById('langEn').addEventListener('click', ()=> showLang('en'));
+    showLang('pt');
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value || '—';
+      const phone = form.phone.value || '—';
+      const email = form.email.value || '—';
+      const service = form.service.value || '—';
+      const date = form.date.value || '—';
+      const notes = form.notes.value || '—';
+      const subject = encodeURIComponent('Pedido de marcação / Booking request — ' + name);
+      const body = encodeURIComponent(
+        'Nome/Name: ' + name + '\n' +
+        'Telefone/Phone: ' + phone + '\n' +
+        'Email: ' + email + '\n' +
+        'Serviço/Service: ' + service + '\n' +
+        'Data/Date: ' + date + '\n' +
+        'Notas/Notes: ' + notes + '\n\n' +
+        'Mensagem enviada via website.'
+      );
+      window.location.href = 'mailto:joana.ferreira.terapeuta@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
