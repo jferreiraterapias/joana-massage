@@ -124,33 +124,41 @@
       </div>
     </section>
 
-    <section id="book" class="py-16">
-      <div class="max-w-3xl mx-auto px-6">
-        <h3 class="text-2xl font-semibold" data-lang="pt">Marcar uma sessão</h3>
-        <h3 class="text-2xl font-semibold" data-lang="en">Book a session</h3>
-        <p class="mt-2 text-gray-600" data-lang="pt">Use o formulário abaixo ou contacte por email/telefone.</p>
-        <p class="mt-2 text-gray-600" data-lang="en">Use the form below or contact by email/phone.</p>
-        <form id="bookingForm" action="#" method="POST" class="mt-6 grid gap-4">
-          <div class="grid md:grid-cols-2 gap-4">
-            <input name="name" required placeholder="Nome completo / Full name" class="p-3 border rounded" />
-            <input name="phone" required placeholder="Telefone (ex: +351...)" class="p-3 border rounded" />
-          </div>
-          <input name="email" type="email" placeholder="Email (opcional)" class="p-3 border rounded" value="joana.ferreira.terapeuta@gmail.com" />
-          <select name="service" class="p-3 border rounded">
-            <option value="relaxation">Relaxation / Relaxamento — 60 min</option>
-            <option value="deep">Deep Tissue — 60 min</option>
-            <option value="sports">Sports / Desportiva</option>
-            <option value="mobile">Mobile Visit / Deslocação</option>
-          </select>
-          <input name="date" type="date" class="p-3 border rounded md:w-1/2" />
-          <textarea name="notes" placeholder="Notas de saúde ou pedidos / Health notes or requests" class="p-3 border rounded" rows="4"></textarea>
-          <div class="flex items-center gap-3">
-            <button type="submit" class="px-5 py-3 bg-emerald-500 text-white rounded-md">Enviar pedido / Send request</button>
-            <p class="text-sm text-gray-600">ou ligue / or call <strong>+351 913 230 273</strong></p>
-          </div>
-        </form>
+    
+<section id="book" class="py-16">
+  <div class="max-w-3xl mx-auto px-6">
+    <h3 class="text-2xl font-semibold" data-lang="pt">Marcar uma sessão</h3>
+    <h3 class="text-2xl font-semibold" data-lang="en">Book a session</h3>
+    <p class="mt-2 text-gray-600" data-lang="pt">Use o formulário abaixo ou contacte por email/telefone.</p>
+    <p class="mt-2 text-gray-600" data-lang="en">Use the form below or contact by email/phone.</p>
+
+    <form id="bookingForm" action="#" method="POST" class="mt-6 grid gap-4">
+      <div class="grid md:grid-cols-2 gap-4">
+        <input name="name" required placeholder="Nome completo / Full name" class="p-3 border rounded" />
+        <input name="phone" required placeholder="Telefone (ex: +351...)" class="p-3 border rounded" />
       </div>
-    </section>
+
+      <input name="email" type="email" placeholder="Email (opcional) / Email (optional)" class="p-3 border rounded" value="joana.ferreira.terapeuta@gmail.com" />
+
+      <select name="service" class="p-3 border rounded">
+        <option value="relaxation">Relaxation / Relaxamento — 60 min</option>
+        <option value="deep">Deep Tissue — 60 min</option>
+        <option value="sports">Sports / Desportiva</option>
+        <option value="mobile">Mobile Visit / Deslocação</option>
+      </select>
+
+      <input name="date" type="date" class="p-3 border rounded md:w-1/2" />
+
+      <textarea name="notes" placeholder="Notas de saúde ou pedidos / Health notes or requests" class="p-3 border rounded" rows="4"></textarea>
+
+      <div class="flex items-center gap-3">
+        <button type="submit" class="px-5 py-3 bg-emerald-500 text-white rounded-md" style="background-color:#059669;color:#ffffff;">Enviar pedido / Send request</button>
+        <p class="text-sm text-gray-600">ou ligue / or call <strong>+351 913 230 273</strong></p>
+      </div>
+    </form>
+  </div>
+</section>
+
 
     <section id="contact" class="py-12 bg-gray-50">
       <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
