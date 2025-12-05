@@ -58,6 +58,12 @@
     <!-- Services updated -->
     
 <section id="services" class="py-16">
+<div class="w-full h-64 relative overflow-hidden my-6" id="services-slider">
+  <img src="assets/massage1.jpg" class="service-slide absolute inset-0 w-full h-full object-cover" style="opacity:1;transition:opacity .6s;">
+  <img src="assets/massage2.jpg" class="service-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;transition:opacity .6s;">
+  <img src="assets/massage3.jpg" class="service-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;transition:opacity .6s;">
+</div>
+
   <div class="max-w-6xl mx-auto px-6">
     <h3 class="text-2xl font-semibold" data-lang="pt">Serviços</h3>
     <h3 class="text-2xl font-semibold" data-lang="en">Services</h3>
@@ -203,11 +209,6 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Language toggle
-    function showLang(lang){
-      document.documentElement.lang = (lang === 'en') ? 'en' : 'pt';
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
-      });
     }
     document.getElementById('langPt').addEventListener('click', ()=> showLang('pt'));
     document.getElementById('langEn').addEventListener('click', ()=> showLang('en'));
@@ -289,5 +290,61 @@ indicators.forEach(b =>
   aboutSlider.addEventListener('mouseleave', ()=> { aInterval = setInterval(nextAbout, 4000); });
   showAbout(0);
 })();
-</script></body>
+</script>
+<script>
+// Robust language toggle: hides all elements with a data-lang attribute that doesn't match the selected language.
+(function(){
+  function applyLang(lang) {
+    // All elements that explicitly declare data-lang
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      try {
+        var elLang = el.getAttribute('data-lang');
+        if (elLang === lang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      } catch (e) {
+        // ignore
+      }
+    });
+  }
+
+  // Expose buttons
+  var btnPt = document.getElementById('langPt');
+  var btnEn = document.getElementById('langEn');
+  if (btnPt) btnPt.addEventListener('click', function(){ applyLang('pt'); localStorage.setItem('site_lang','pt'); });
+  if (btnEn) btnEn.addEventListener('click', function(){ applyLang('en'); localStorage.setItem('site_lang','en'); });
+
+  // Apply saved preference or default to pt
+  var saved = localStorage.getItem('site_lang') || 'pt';
+  // Wait for DOM to settle
+  document.addEventListener('DOMContentLoaded', function(){ applyLang(saved); });
+  // Also run once immediately in case DOM already loaded
+  applyLang(saved);
+})();
+</script>
+
+
+<script>
+(function(){
+  const slides = document.querySelectorAll('#services-slider .service-slide');
+  if (!slides.length) return;
+  let i = 0;
+  function show(n){
+    slides.forEach((img,idx)=>img.style.opacity = idx===n ? '1':'0');
+  }
+  function next(){
+    i = (i+1) % slides.length;
+    show(i);
+  }
+  let intv = setInterval(next, 4000);
+  const box = document.getElementById('services-slider');
+  box.addEventListener('mouseenter',()=>clearInterval(intv));
+  box.addEventListener('mouseleave',()=>intv=setInterval(next,4000));
+  show(0);
+})();
+</script>
+
+</body>
 </html>
