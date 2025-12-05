@@ -42,29 +42,18 @@
 
   <main>
     <!-- HERO with slider -->
-    <section id="hero" class="hero-bg h-screen flex items-center" style="background-image:url('assets/massage1.jpg');">
-      <div class="max-w-4xl mx-auto px-6 py-20 text-white">
-        <div class="bg-black bg-opacity-30 backdrop-blur-sm p-8 rounded-2xl shadow-xl inline-block">
-          <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="pt">Relaxa. Recupera. Renova.</h2>
-          <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="en">Relax. Restore. Renew.</h2>
-          <p class="mt-4 text-lg max-w-2xl" data-lang="pt">Massagem profissional adaptada às suas necessidades — relaxamento, DLM, massagem desportiva e deslocações ao domicílio em Santarém.</p>
-          <p class="mt-4 text-lg max-w-2xl" data-lang="en">Professional massage tailored to your needs — relaxation, MLD, sports massage and mobile visits in Santarém.</p>
-          <div class="mt-6 flex gap-3">
-            <a href="#book" class="px-5 py-3 bg-emerald-500 text-white rounded-md shadow" data-lang="pt">Marcar Sessão</a>
-            <a href="#book" class="px-5 py-3 bg-emerald-500 text-white rounded-md shadow" data-lang="en">Book a Session</a>
-            <a href="#services" class="px-5 py-3 bg-white text-gray-900 rounded-md shadow" data-lang="pt">Ver Serviços</a>
-            <a href="#services" class="px-5 py-3 bg-white text-gray-900 rounded-md shadow" data-lang="en">See Services</a>
-          </div>
-          <p class="mt-4 text-sm text-gray-200" data-lang="pt">Vouchers disponíveis • Terapeuta certificada</p>
-          <p class="mt-4 text-sm text-gray-200" data-lang="en">Gift vouchers available • Certified therapist</p>
-          <div class="mt-4 slide-indicators flex items-center justify-center" aria-hidden="false">
-            <button data-index="0" style="background:#fff;"></button>
-            <button data-index="1" style="background:rgba(255,255,255,0.6);"></button>
-            <button data-index="2" style="background:rgba(255,255,255,0.6);"></button>
-          </div>
-        </div>
-      </div>
-    </section>
+    
+<section id="hero" class="relative w-full h-[60vh] flex items-center justify-center text-white"
+         style="background-image:url('assets/banner_top.png');background-size:cover;background-position:center;">
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-4xl font-bold mb-4" data-lang="pt">Massagens Terapêuticas</h1>
+    <h1 class="text-4xl font-bold mb-4" data-lang="en">Therapeutic Massages</h1>
+    <p class="text-lg" data-lang="pt">Cuidar do seu bem‑estar físico e emocional.</p>
+    <p class="text-lg" data-lang="en">Caring for your physical and emotional well‑being.</p>
+  </div>
+</section>
+
 
     <!-- Services updated -->
     <section id="services" class="py-16">
@@ -273,19 +262,7 @@
         if(btn){ btn.disabled = false; btn.style.opacity = 1; }
       }
     });
-    // Hero slider logic: images in assets. Change every 5s, buttons to select.
-    
-const slides = ['assets/massage1.jpg','assets/massage2.jpg','assets/massage3.jpg'];
-let current = 0;
-const hero = document.getElementById('hero');
-const indicators = document.querySelectorAll('.slide-indicators button');
-
-// Slide switching function
-function showSlide(i){
-  current = i % slides.length;
-  hero.style.backgroundImage = "url('" + slides[current] + "')";
-  indicators.forEach((b, idx)=> b.style.background = idx===current ? '#fff' : 'rgba(255,255,255,0.6)');
-}
+    }
 
 // --- Auto-rotation with pause on hover ---
 let slideInterval = setInterval(nextSlide, 5000);
