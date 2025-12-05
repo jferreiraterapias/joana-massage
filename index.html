@@ -4,14 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Joana Ferreira — Massagem terapêutica</title>
-  <meta name="description" content="Massagem profissional em Santarém — relaxamento, deep tissue, massagem desportiva e deslocações. Marque com Joana Ferreira." />
-  <meta name="keywords" content="massagem, massagista, massagem desportiva, massagem relaxamento, massagem deep tissue, Santarém" />
+  <meta name="description" content="Massagem profissional em Santarém — relaxamento, DLM, massagem desportiva e deslocações. Marque com Joana Ferreira." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    .hero-bg{ background-image: linear-gradient(rgba(8,8,10,0.45), rgba(8,8,10,0.45)), url('assets/massage1.jpg'); background-size: cover; background-position: center; }
+    .hero-bg{ background-size: cover; background-position: center; transition: background-image 0.8s ease-in-out; }
+    .slide-indicators button{ width:10px; height:10px; border-radius:50%; border:none; margin:0 6px; }
   </style>
 </head>
 <body class="antialiased text-gray-800">
+
   <header class="bg-white shadow-sm sticky top-0 z-30">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#hero" class="flex items-center gap-3">
@@ -40,13 +41,14 @@
   </header>
 
   <main>
-    <section id="hero" class="hero-bg h-screen flex items-center">
+    <!-- HERO with slider -->
+    <section id="hero" class="hero-bg h-screen flex items-center" style="background-image:url('assets/massage1.jpg');">
       <div class="max-w-4xl mx-auto px-6 py-20 text-white">
         <div class="bg-black bg-opacity-30 backdrop-blur-sm p-8 rounded-2xl shadow-xl inline-block">
           <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="pt">Relaxa. Recupera. Renova.</h2>
           <h2 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="en">Relax. Restore. Renew.</h2>
-          <p class="mt-4 text-lg max-w-2xl" data-lang="pt">Massagem profissional adaptada às suas necessidades — relaxamento, deep tissue, recuperação desportiva e deslocações ao domicílio em Santarém.</p>
-          <p class="mt-4 text-lg max-w-2xl" data-lang="en">Professional massage tailored to your needs — relaxation, deep tissue, sports recovery and mobile visits in Santarém.</p>
+          <p class="mt-4 text-lg max-w-2xl" data-lang="pt">Massagem profissional adaptada às suas necessidades — relaxamento, DLM, massagem desportiva e deslocações ao domicílio em Santarém.</p>
+          <p class="mt-4 text-lg max-w-2xl" data-lang="en">Professional massage tailored to your needs — relaxation, MLD, sports massage and mobile visits in Santarém.</p>
           <div class="mt-6 flex gap-3">
             <a href="#book" class="px-5 py-3 bg-emerald-500 text-white rounded-md shadow" data-lang="pt">Marcar Sessão</a>
             <a href="#book" class="px-5 py-3 bg-emerald-500 text-white rounded-md shadow" data-lang="en">Book a Session</a>
@@ -55,53 +57,84 @@
           </div>
           <p class="mt-4 text-sm text-gray-200" data-lang="pt">Vouchers disponíveis • Terapeuta certificada</p>
           <p class="mt-4 text-sm text-gray-200" data-lang="en">Gift vouchers available • Certified therapist</p>
+          <div class="mt-4 slide-indicators flex items-center justify-center" aria-hidden="false">
+            <button data-index="0" style="background:#fff;"></button>
+            <button data-index="1" style="background:rgba(255,255,255,0.6);"></button>
+            <button data-index="2" style="background:rgba(255,255,255,0.6);"></button>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Services updated -->
     <section id="services" class="py-16">
       <div class="max-w-6xl mx-auto px-6">
         <h3 class="text-2xl font-semibold" data-lang="pt">Serviços</h3>
         <h3 class="text-2xl font-semibold" data-lang="en">Services</h3>
         <p class="mt-2 text-gray-600 max-w-2xl" data-lang="pt">Escolha um tratamento que se adapte às suas necessidades.</p>
         <p class="mt-2 text-gray-600 max-w-2xl" data-lang="en">Choose a treatment that fits your needs.</p>
+
         <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <article class="p-6 border rounded-lg">
-            <h4 class="font-semibold text-lg" data-lang="pt">Massagem de Relaxamento — 60 / 90 min</h4>
-            <h4 class="font-semibold text-lg" data-lang="en">Relaxation Massage — 60 / 90 min</h4>
-            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Movimentos suaves para aliviar a tensão e promover relaxamento profundo.</p>
-            <p class="mt-2 text-sm text-gray-600" data-lang="en">Gentle strokes to ease tension and promote deep relaxation.</p>
-            <ul class="mt-3 text-sm text-gray-700 space-y-1">
-              <li data-lang="pt">60 min — 50€</li>
-              <li data-lang="pt">90 min — 70€</li>
-              <li data-lang="en">60 min — 50€</li>
-              <li data-lang="en">90 min — 70€</li>
-            </ul>
+            <h4 class="font-semibold text-lg" data-lang="pt">Massagens Redutora, Anti Celulítica Localizada</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Reducing / Localized Anti-Cellulite Massage</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Sessão de 30 minutos, trabalho localizado para reduzir gordura e celulite.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">30-minute session focusing on localized reduction and anti-cellulite techniques.</p>
+            <p class="mt-3 text-sm text-gray-700">30€</p>
           </article>
+
           <article class="p-6 border rounded-lg">
-            <h4 class="font-semibold text-lg" data-lang="pt">Deep Tissue — 60 / 90 min</h4>
-            <h4 class="font-semibold text-lg" data-lang="en">Deep Tissue — 60 / 90 min</h4>
-            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Pressão focada para libertar tensão muscular crónica.</p>
-            <p class="mt-2 text-sm text-gray-600" data-lang="en">Focused pressure to release chronic muscle tension.</p>
-            <ul class="mt-3 text-sm text-gray-700 space-y-1">
-              <li data-lang="pt">60 min — 65€</li>
-              <li data-lang="pt">90 min — 90€</li>
-              <li data-lang="en">60 min — 65€</li>
-              <li data-lang="en">90 min — 90€</li>
-            </ul>
+            <h4 class="font-semibold text-lg" data-lang="pt">Corpo Completo</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Full Body</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Sessão de 30 minutos para relaxamento e alívio de tensão geral.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">30-minute session for relaxation and general tension relief.</p>
+            <p class="mt-3 text-sm text-gray-700">35€</p>
           </article>
+
           <article class="p-6 border rounded-lg">
-            <h4 class="font-semibold text-lg" data-lang="pt">Massagem Desportiva / Terapia</h4>
-            <h4 class="font-semibold text-lg" data-lang="en">Sports Massage / Therapy</h4>
-            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Trabalho direcionado para atletas — pré/pós competição e prevenção de lesões.</p>
-            <p class="mt-2 text-sm text-gray-600" data-lang="en">Targeted work for athletes — pre/post event and injury prevention.</p>
-            <p class="mt-3 text-sm text-gray-700" data-lang="pt">A partir de 50€ (depende da duração)</p>
-            <p class="mt-3 text-sm text-gray-700" data-lang="en">From 50€ (depends on session length)</p>
+            <h4 class="font-semibold text-lg" data-lang="pt">Drenagem Linfática Manual</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Manual Lymphatic Drainage</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Sessão de 30 minutos para reduzir edema e melhorar circulação linfática.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">30-minute session to reduce swelling and improve lymphatic circulation.</p>
+            <p class="mt-3 text-sm text-gray-700">50€</p>
+          </article>
+
+          <article class="p-6 border rounded-lg">
+            <h4 class="font-semibold text-lg" data-lang="pt">Massagem Terapêutica</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Therapeutic Massage</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Sessão de 30 minutos focada em alívio de dores e tensões musculares.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">30-minute session focused on relieving pain and muscle tension.</p>
+            <p class="mt-3 text-sm text-gray-700">45€</p>
+          </article>
+
+          <article class="p-6 border rounded-lg">
+            <h4 class="font-semibold text-lg" data-lang="pt">Massagem Desportiva</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Sports Massage</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Sessão de 45 minutos para atletas — pré/pós competição e recuperação.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">45-minute session for athletes — pre/post event and recovery work.</p>
+            <p class="mt-3 text-sm text-gray-700">50€</p>
+          </article>
+
+          <article class="p-6 border rounded-lg">
+            <h4 class="font-semibold text-lg" data-lang="pt">DLM Pré Operatório (45m)</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Pre-Operative Manual Lymphatic Drainage (45m)</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Sessão de 45 minutos para preparação e cuidados pré-operatórios.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">45-minute session for pre-operative preparation and care.</p>
+            <p class="mt-3 text-sm text-gray-700">40€</p>
+          </article>
+
+          <article class="p-6 border rounded-lg">
+            <h4 class="font-semibold text-lg" data-lang="pt">DLM Pós Operatório (1:30h)</h4>
+            <h4 class="font-semibold text-lg" data-lang="en">Post-Operative Manual Lymphatic Drainage (1h30)</h4>
+            <p class="mt-2 text-sm text-gray-600" data-lang="pt">Sessão de 1 hora e 30 minutos para recuperação e auxílio pós-operatório.</p>
+            <p class="mt-2 text-sm text-gray-600" data-lang="en">1 hour 30 minutes session to assist post-operative recovery.</p>
+            <p class="mt-3 text-sm text-gray-700">60€</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- About & Booking (kept previous structure) -->
     <section id="about" class="py-12 bg-gray-50">
       <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
         <div>
@@ -124,41 +157,44 @@
       </div>
     </section>
 
-    
-<section id="book" class="py-16">
-  <div class="max-w-3xl mx-auto px-6">
-    <h3 class="text-2xl font-semibold" data-lang="pt">Marcar uma sessão</h3>
-    <h3 class="text-2xl font-semibold" data-lang="en">Book a session</h3>
-    <p class="mt-2 text-gray-600" data-lang="pt">Use o formulário abaixo ou contacte por email/telefone.</p>
-    <p class="mt-2 text-gray-600" data-lang="en">Use the form below or contact by email/phone.</p>
+    <section id="book" class="py-16">
+      <div class="max-w-3xl mx-auto px-6">
+        <h3 class="text-2xl font-semibold" data-lang="pt">Marcar uma sessão</h3>
+        <h3 class="text-2xl font-semibold" data-lang="en">Book a session</h3>
+        <p class="mt-2 text-gray-600" data-lang="pt">Use o formulário abaixo ou contacte por email/telefone.</p>
+        <p class="mt-2 text-gray-600" data-lang="en">Use the form below or contact by email/phone.</p>
 
-    <form id="bookingForm" action="#" method="POST" class="mt-6 grid gap-4">
-      <div class="grid md:grid-cols-2 gap-4">
-        <input name="name" required placeholder="Nome completo / Full name" class="p-3 border rounded" />
-        <input name="phone" required placeholder="Telefone (ex: +351...)" class="p-3 border rounded" />
+        <form id="bookingForm" action="#" method="POST" class="mt-6 grid gap-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <input name="name" required placeholder="Nome completo / Full name" class="p-3 border rounded" />
+            <input name="phone" required placeholder="Telefone (ex: +351...)" class="p-3 border rounded" />
+          </div>
+
+          <input name="email" type="email" placeholder="Email (opcional) / Email (optional)" class="p-3 border rounded" value="joana.ferreira.terapeuta@gmail.com" />
+
+          <select name="service" class="p-3 border rounded">
+            <option value="reducing">Massagens Redutora / Reducing — 30 min</option>
+            <option value="full">Corpo Completo / Full Body — 30 min</option>
+            <option value="dlm">Drenagem Linfática Manual / MLD — 30 min</option>
+            <option value="therapeutic">Massagem Terapêutica / Therapeutic — 30 min</option>
+            <option value="sports">Massagem Desportiva / Sports — 45 min</option>
+            <option value="dlm_pre">DLM Pré Operatório (45m) / Pre-Op — 45 min</option>
+            <option value="dlm_post">DLM Pós Operatório (1h30) / Post-Op — 1h30</option>
+          </select>
+
+          <input name="date" type="date" class="p-3 border rounded md:w-1/2" />
+
+          <textarea name="notes" placeholder="Notas de saúde ou pedidos / Health notes or requests" class="p-3 border rounded" rows="4"></textarea>
+
+          <div class="flex items-center gap-3">
+            <button type="submit" id="bookingSubmit" class="px-5 py-3 rounded-md" style="background-color:#059669 !important; color:#ffffff !important;">
+              Enviar pedido / Send request
+            </button>
+            <p class="text-sm text-gray-600">ou ligue / or call <strong>+351 913 230 273</strong></p>
+          </div>
+        </form>
       </div>
-
-      <input name="email" type="email" placeholder="Email (opcional) / Email (optional)" class="p-3 border rounded" value="joana.ferreira.terapeuta@gmail.com" />
-
-      <select name="service" class="p-3 border rounded">
-        <option value="relaxation">Relaxation / Relaxamento — 60 min</option>
-        <option value="deep">Deep Tissue — 60 min</option>
-        <option value="sports">Sports / Desportiva</option>
-        <option value="mobile">Mobile Visit / Deslocação</option>
-      </select>
-
-      <input name="date" type="date" class="p-3 border rounded md:w-1/2" />
-
-      <textarea name="notes" placeholder="Notas de saúde ou pedidos / Health notes or requests" class="p-3 border rounded" rows="4"></textarea>
-
-      <div class="flex items-center gap-3">
-        <button type="submit" class="px-5 py-3 bg-emerald-500 text-white rounded-md" style="background-color:#059669;color:#ffffff;">Enviar pedido / Send request</button>
-        <p class="text-sm text-gray-600">ou ligue / or call <strong>+351 913 230 273</strong></p>
-      </div>
-    </form>
-  </div>
-</section>
-
+    </section>
 
     <section id="contact" class="py-12 bg-gray-50">
       <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
@@ -186,7 +222,10 @@
   </main>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Language toggle
     function showLang(lang){
       document.documentElement.lang = (lang === 'en') ? 'en' : 'pt';
       document.querySelectorAll('[data-lang]').forEach(el => {
@@ -196,27 +235,78 @@
     document.getElementById('langPt').addEventListener('click', ()=> showLang('pt'));
     document.getElementById('langEn').addEventListener('click', ()=> showLang('en'));
     showLang('pt');
-    document.getElementById('bookingForm').addEventListener('submit', function(e){
+
+    // Booking form default handler (keeps mailto fallback until Formspree endpoint added)
+    
+    document.getElementById('bookingForm').addEventListener('submit', async function(e){
       e.preventDefault();
       const form = e.target;
-      const name = form.name.value || '—';
-      const phone = form.phone.value || '—';
-      const email = form.email.value || '—';
-      const service = form.service.value || '—';
-      const date = form.date.value || '—';
-      const notes = form.notes.value || '—';
-      const subject = encodeURIComponent('Pedido de marcação / Booking request — ' + name);
-      const body = encodeURIComponent(
-        'Nome/Name: ' + name + '\n' +
-        'Telefone/Phone: ' + phone + '\n' +
-        'Email: ' + email + '\n' +
-        'Serviço/Service: ' + service + '\n' +
-        'Data/Date: ' + date + '\n' +
-        'Notas/Notes: ' + notes + '\n\n' +
-        'Mensagem enviada via website.'
-      );
-      window.location.href = 'mailto:joana.ferreira.terapeuta@gmail.com?subject=' + subject + '&body=' + body;
+      const btn = document.getElementById('bookingSubmit') || form.querySelector('button[type="submit"]');
+      const data = {};
+      data.name = form.name.value || '';
+      data.phone = form.phone.value || '';
+      data.email = form.email.value || '';
+      data.service = form.service.value || '';
+      data.date = form.date.value || '';
+      data.notes = form.notes.value || '';
+      const fd = new FormData();
+      Object.entries(data).forEach(function(pair){ fd.append(pair[0], pair[1]); });
+      fd.append('_replyto', data.email || 'no-reply@example.com');
+      fd.append('_subject', 'Pedido de marcação / Booking request — ' + (data.name || 'Novo cliente'));
+
+      if(btn){ btn.disabled = true; btn.style.opacity = 0.6; }
+
+      try{
+        const resp = await fetch('https://formspree.io/f/mwpgqqzg', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+        if(resp.ok){
+          alert('Pedido enviado. Joana vai receber o seu pedido. / Request sent — Joana will receive your request.');
+          form.reset();
+        } else {
+          const json = await resp.json().catch(function(){return null;});
+          console.error('Formspree error', json);
+          alert('Erro ao enviar. Por favor tente novamente mais tarde. / Sending error, please try again.');
+        }
+      } catch(err){
+        console.error(err);
+        alert('Erro de rede. Por favor verifique a ligação e tente de novo. / Network error.');
+      } finally {
+        if(btn){ btn.disabled = false; btn.style.opacity = 1; }
+      }
     });
-  </script>
+    // Hero slider logic: images in assets. Change every 5s, buttons to select.
+    
+const slides = ['assets/massage1.jpg','assets/massage2.jpg','assets/massage3.jpg'];
+let current = 0;
+const hero = document.getElementById('hero');
+const indicators = document.querySelectorAll('.slide-indicators button');
+
+// Slide switching function
+function showSlide(i){
+  current = i % slides.length;
+  hero.style.backgroundImage = "url('" + slides[current] + "')";
+  indicators.forEach((b, idx)=> b.style.background = idx===current ? '#fff' : 'rgba(255,255,255,0.6)');
+}
+
+// --- Auto-rotation with pause on hover ---
+let slideInterval = setInterval(nextSlide, 5000);
+
+function nextSlide(){
+  showSlide((current + 1) % slides.length);
+}
+
+// Pause on hover
+hero.addEventListener('mouseenter', () => {
+  clearInterval(slideInterval);
+});
+
+hero.addEventListener('mouseleave', () => {
+  slideInterval = setInterval(nextSlide, 5000);
+});
+
+// Attach indicator clicks (manual control)
+indicators.forEach(b =>
+  b.addEventListener('click', ()=> showSlide(Number(b.dataset.index)))
+);
+</script>
 </body>
 </html>
